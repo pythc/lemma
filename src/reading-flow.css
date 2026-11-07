@@ -1,0 +1,1110 @@
+/* Reader-first flow. Keep the paper central and defer results until acknowledgement. */
+.reading-flow {
+  color: #30272c;
+}
+.reading-flow .app-header {
+  padding: 0 26px;
+  gap: 18px;
+}
+.reading-flow .header-actions {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.reading-flow .header-actions .button {
+  font-size: 13px;
+}
+.reading-flow .app-header h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.reading-flow .workspace {
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+.reading-flow .reader-region {
+  min-width: 0;
+}
+.reading-flow .reader-toolbar {
+  padding: 0 18px;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.reading-flow .reader-toolbar .tool {
+  font-size: 12px;
+}
+.reading-flow .paper-scroll {
+  padding: 30px 24px 60px;
+}
+.upload-home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 24px 90px;
+  background: #faf9f6;
+  overflow: auto;
+}
+.upload-intro {
+  text-align: center;
+  max-width: 680px;
+}
+.upload-intro .eyebrow {
+  font-size: 13px;
+  color: #80536a;
+  letter-spacing: 2px;
+}
+.upload-intro h1 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 22px 0 18px;
+}
+.upload-intro > p:last-child {
+  color: #65575e;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.upload-drop {
+  margin-top: 32px;
+  width: min(540px, 100%);
+  min-height: 240px;
+  border: 1.5px dashed #a77e91;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #fff;
+  color: #78344f;
+  transition: background 0.15s;
+}
+.upload-drop:hover {
+  background: #f5edf1;
+}
+.upload-drop strong {
+  font-size: 19px;
+  font-weight: 600;
+}
+.upload-drop span,
+.upload-drop small {
+  font-size: 13px;
+  color: #65575e;
+}
+.upload-drop small {
+  margin-top: 5px;
+}
+.upload-hint {
+  font-size: 13px;
+  color: #6e6068;
+  margin-top: 24px;
+  text-align: center;
+}
+.upload-error {
+  color: #8b293e;
+  max-width: 540px;
+}
+.review-side {
+  width: clamp(300px, 33vw, 530px);
+  flex: 0 1 clamp(300px, 33vw, 530px);
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #cfc1c7;
+  background: #fff;
+  overflow: auto;
+}
+.result-display-bar {
+  min-height: 51px;
+  padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #d9cdd2;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.result-tabs {
+  display: flex;
+  height: 51px;
+  gap: 22px;
+}
+.result-tabs button {
+  padding: 0 5px;
+  border-bottom: 3px solid transparent;
+  color: #65575e;
+  font-size: 14px;
+}
+.result-tabs button[aria-selected="true"] {
+  border-color: #78344f;
+  color: #78344f;
+  font-weight: 600;
+}
+.result-display-bar .progress-link {
+  margin-left: auto;
+  font-size: 12px;
+}
+.annotation-page-nav {
+  display: flex;
+  gap: 8px;
+}
+.annotation-page-nav .button {
+  font-size: 12px;
+}
+.result-summary {
+  padding: 28px;
+  line-height: 1.8;
+}
+.result-eyebrow {
+  color: #5b7054;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin: 0 0 16px;
+}
+.result-summary h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 18px;
+  overflow-wrap: anywhere;
+}
+.result-scope {
+  font-size: 13px;
+  color: #66545f;
+}
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+.result-actions > .button {
+  flex: 1 1 140px;
+  justify-content: center;
+  font-size: 13px;
+}
+.result-reading-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 14px;
+  border: 1px solid #d2ac83;
+  border-radius: 6px;
+  background: #fff8f0;
+  color: #7c4717;
+  font-size: 14px;
+}
+.result-reading-warning > svg {
+  flex: none;
+  margin-top: 4px;
+}
+.claim-verdict {
+  font-weight: 600;
+  color: #49333e;
+}
+.result-dimensions {
+  margin: 25px 0;
+  border-top: 1px solid #d9cdd2;
+}
+.result-dimensions div {
+  padding: 14px 0;
+  border-bottom: 1px solid #e6dce1;
+}
+.result-dimensions dt {
+  font-size: 12px;
+  color: #6f5b66;
+}
+.result-dimensions dd {
+  margin: 3px 0 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+.result-summary h3 {
+  font-size: 14px;
+  margin: 25px 0 10px;
+}
+.result-summary blockquote {
+  background: #f8f5f2;
+  border-left: 2px solid #a47e8f;
+  padding: 14px;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.result-summary ul {
+  padding-left: 20px;
+  font-size: 13px;
+  color: #66545f;
+}
+.result-summary > .button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 16px;
+  font-size: 13px;
+}
+.result-more {
+  margin-top: 24px;
+  border-top: 1px solid #e6dce1;
+  padding-top: 18px;
+  font-size: 13px;
+  color: #66545f;
+}
+/* Compact three-branch tree, with readable status labels. */
+.workflow-embedded {
+  padding: 24px 20px 32px;
+  overflow: visible;
+  flex: none;
+}
+.workflow-embedded .workflow-topline {
+  font-size: 14px;
+  font-weight: 600;
+}
+.workflow-embedded .workflow-heading {
+  margin: 22px 0 20px;
+  gap: 10px;
+  align-items: flex-start;
+}
+.workflow-embedded .workflow-heading .eyebrow {
+  display: none;
+}
+.workflow-embedded .workflow-heading h2 {
+  font-size: 21px;
+  margin-bottom: 9px;
+}
+.workflow-embedded .workflow-heading p {
+  font-size: 13px;
+}
+.workflow-embedded .workflow-count {
+  min-width: 66px;
+  text-align: right;
+}
+.workflow-embedded .workflow-count strong {
+  font-size: 30px;
+}
+.workflow-embedded .workflow-count span {
+  max-width: 75px;
+  line-height: 1.5;
+}
+.workflow-embedded .workflow-controls {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 18px;
+}
+.workflow-embedded .workflow-file {
+  display: none;
+}
+.workflow-embedded .workflow-controls select {
+  max-width: 100%;
+  width: 100%;
+}
+.workflow-embedded .workflow-controls:empty {
+  display: none;
+}
+.workflow-embedded .workflow-setup {
+  padding: 15px;
+  gap: 12px;
+}
+.workflow-embedded .workflow-setup select {
+  max-width: 220px;
+}
+.workflow-embedded .workflow-setup .button {
+  font-size: 13px;
+}
+.workflow-embedded .workflow-root {
+  width: auto;
+  padding: 16px;
+}
+.workflow-embedded .workflow-root-icon {
+  width: 34px;
+  height: 34px;
+}
+.workflow-embedded .workflow-root strong {
+  font-size: 14px;
+}
+.workflow-embedded .workflow-root span {
+  font-size: 12px;
+}
+.workflow-embedded .workflow-analysis {
+  width: auto;
+  padding: 15px;
+}
+.workflow-embedded .workflow-analysis h3 {
+  font-size: 14px;
+}
+.workflow-embedded .workflow-analysis-tasks {
+  margin-top: 13px;
+}
+.workflow-embedded .workflow-branch-label {
+  margin: 22px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1.5;
+  gap: 5px;
+}
+.workflow-embedded .workflow-branch-label span {
+  flex-basis: 100%;
+  text-align: center;
+}
+.workflow-embedded .workflow-lanes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding-top: 14px;
+}
+.workflow-embedded .workflow-lane {
+  padding: 12px 9px;
+  min-height: 170px;
+  border-radius: 7px;
+}
+.workflow-embedded .workflow-lane > header {
+  min-height: 72px;
+  padding: 0 0 10px;
+}
+.workflow-embedded .workflow-lane > header > span {
+  display: none;
+}
+.workflow-embedded .workflow-lane h3 {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.workflow-embedded .workflow-lane header p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin-top: 5px;
+}
+.workflow-embedded .workflow-task {
+  gap: 6px;
+  padding: 10px 7px;
+  min-height: 58px;
+}
+.workflow-embedded .workflow-task > svg:first-child {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.workflow-embedded .workflow-task > svg:last-child {
+  display: none;
+}
+.workflow-embedded .workflow-task strong {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.workflow-embedded .workflow-task small {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.workflow-embedded .workflow-pending {
+  font-size: 12px;
+  padding: 14px 2px;
+  line-height: 1.7;
+}
+.workflow-embedded .workflow-pending small {
+  display: none;
+}
+.workflow-embedded .workflow-result {
+  padding: 16px;
+  display: block;
+}
+.workflow-embedded .workflow-result h3 {
+  font-size: 14px;
+}
+.workflow-embedded .workflow-result p {
+  font-size: 12px;
+}
+.workflow-embedded .workflow-result .button {
+  margin-top: 12px;
+  font-size: 12px;
+}
+.workflow-embedded .workflow-stage-number {
+  font-size: 13px;
+}
+.workflow-embedded .workflow-boundary {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+.workflow-embedded .workflow-task-detail {
+  width: min(400px, calc(100vw - 32px));
+  right: 16px;
+  bottom: 16px;
+  max-height: 60dvh;
+  overflow: auto;
+  z-index: 50;
+}
+.workflow-restart {
+  font-size: 13px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 16px;
+}
+.review-ready {
+  padding: 19px;
+  border: 1px solid #947283;
+  background: #f4ecf0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.review-ready h3 {
+  font-size: 17px;
+  margin: 9px 0;
+}
+.review-ready p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #5f4b56;
+}
+.review-ready .button {
+  width: 100%;
+  font-size: 14px;
+  justify-content: center;
+}
+.needs-action {
+  background: #faf3e6;
+  border-color: #b59a66;
+}
+/* Independent Word-style cards share the PDF scroll surface. */
+.paper-spread {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  margin: 0 auto;
+}
+.paper-spread .pdf-page {
+  margin: 0;
+}
+.word-comments {
+  width: 264px;
+  position: relative;
+  flex-shrink: 0;
+}
+.positioned-comment {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.word-comments .reader-note {
+  background: #fff;
+  border: 1px solid transparent;
+  border-left: 2px solid #bb7b8d;
+  border-radius: 0 4px 4px 0;
+  padding: 0;
+  box-shadow: none;
+  margin: 0;
+}
+.word-comments .reader-note.expanded {
+  border-color: #78344f;
+  box-shadow: 0 3px 12px #45233513;
+}
+.word-comments .reader-note-summary {
+  display: grid;
+  grid-template-columns: 15px minmax(0, 1fr) 13px;
+  gap: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 9px;
+  color: #45353e;
+}
+.reader-note-summary > .reader-note-preview {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+.reader-note-preview strong {
+  display: block;
+  color: #873e55;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.reader-note-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.note-author-icon {
+  color: #873e55;
+  margin-top: 1px;
+}
+.note-author-icon.human {
+  color: #796025;
+}
+.reader-note-summary:focus-visible,
+.anchor-label:focus-visible,
+.outline-title:focus-visible,
+.outline-disclosure:focus-visible {
+  outline: 2px solid #873e55;
+  outline-offset: 2px;
+}
+.word-comments .reader-note-meta {
+  color: #705d68;
+  font-size: 12px;
+  margin: 0 0 8px;
+  padding: 0;
+}
+.note-collapse {
+  margin-left: auto;
+  color: #873e55;
+  padding: 4px 0 4px 8px;
+}
+.word-comments .reader-note-detail {
+  padding: 0 14px 18px;
+}
+.word-comments .reader-note-detail h3 {
+  font-size: 16px;
+}
+.word-comments .reader-note-detail p,
+.word-comments .reader-note-detail button,
+.word-comments .reader-note-detail small,
+.word-comments .reader-note-detail dt,
+.word-comments .reader-note-detail dd,
+.word-comments .reader-note-detail summary {
+  font-size: 12px;
+}
+.word-comments .reader-note-detail code {
+  font-size: 11px;
+}
+.word-comments .annotation-agents button {
+  grid-template-columns: 7px 30px 1fr;
+}
+.word-comments .annotation-agents button small {
+  grid-column: 3;
+}
+.word-comments .note-context-actions {
+  flex-wrap: wrap;
+}
+.word-comments .note-context-actions .button {
+  flex: 1;
+  white-space: nowrap;
+  justify-content: center;
+}
+.comment-offset {
+  display: block;
+  color: #705d68;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.margin-empty {
+  color: #6c5964;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 30px 10px;
+}
+.unplaced-notes {
+  padding: 24px;
+  max-width: 950px;
+  margin: 30px auto 0;
+  background: #fff9ef;
+  border: 1px solid #bda06f;
+}
+.unplaced-notes h3 {
+  font-size: 15px;
+}
+.unplaced-notes > p {
+  font-size: 13px;
+  color: #6b5438;
+}
+.unplaced-notes .reader-note {
+  margin-top: 15px;
+  background: #fff;
+}
+.reading-flow .navigation-pane {
+  position: absolute;
+  z-index: 40;
+  top: 128px;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  background: #fff;
+  box-shadow: 8px 0 25px #382a341a;
+}
+.pdf-outline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pdf-outline-list .pdf-outline-list {
+  margin-left: 15px;
+  border-left: 1px solid #e6dde1;
+  padding-left: 2px;
+}
+.outline-row {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 3px;
+  min-width: 0;
+  color: #493d44;
+}
+.outline-row:hover {
+  background: #f8f3f5;
+}
+.outline-row.chosen {
+  background: #f3e8ed;
+  color: #873e55;
+}
+.outline-disclosure,
+.outline-indent {
+  flex: 0 0 22px;
+  width: 22px;
+}
+.outline-disclosure {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  color: #705d68;
+}
+.outline-disclosure[aria-expanded="true"] svg {
+  transform: rotate(90deg);
+}
+.outline-title {
+  flex: 1;
+  min-width: 0;
+  display: block;
+  text-align: left;
+  padding: 8px 4px;
+  line-height: 1.5;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  color: inherit;
+}
+.outline-title svg {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.outline-title:disabled {
+  opacity: 1;
+  color: #70636a;
+}
+.outline-title[aria-busy="true"] {
+  opacity: 0.65;
+}
+.outline-message {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #6d5d66;
+  margin: 12px 5px;
+}
+.annotation-toggle {
+  gap: 5px;
+}
+.annotation-toggle small {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.reading-flow .reader-ai-window {
+  z-index: 70;
+}
+@media (max-width: 1100px) {
+  .reading-flow .review-side {
+    width: 400px;
+  }
+  .reading-flow .reader-toolbar .tool span {
+    display: none;
+  }
+  .reading-flow .app-header h1 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .reading-flow .workspace {
+    flex-direction: column;
+    overflow: auto;
+  }
+  .reading-flow .reader-region {
+    flex: none;
+    height: 62dvh;
+    min-height: 380px;
+    width: 100%;
+  }
+  .reading-flow .review-side {
+    width: 100%;
+    overflow: visible;
+    border-left: 0;
+    border-top: 1px solid #cfc1c7;
+  }
+  .reading-flow .annotation-workspace .reader-region {
+    height: 100%;
+    min-height: 0;
+    flex: 1;
+  }
+  .reading-flow .app-header {
+    height: 62px;
+    padding: 0 15px;
+    gap: 10px;
+  }
+  .reading-flow .wordmark {
+    font-size: 29px;
+  }
+  .reading-flow .mode-label,
+  .reading-flow .header-divider {
+    display: none;
+  }
+  .reading-flow .app-header h1 {
+    flex: 1;
+  }
+  .reading-flow .header-actions {
+    gap: 6px;
+  }
+  .reading-flow .header-actions .button {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .result-display-bar {
+    padding: 0 15px;
+    flex-wrap: wrap;
+    gap: 0 14px;
+  }
+  .annotation-page-nav {
+    order: 3;
+    flex-basis: 100%;
+    padding-bottom: 6px;
+  }
+  .result-display-bar .progress-link {
+    font-size: 12px;
+  }
+  .reading-flow .paper-scroll {
+    padding: 18px 12px 40px;
+  }
+  .reading-flow .reader-toolbar {
+    padding: 0 9px;
+    gap: 3px;
+    height: 52px;
+  }
+  .reading-flow .reader-toolbar .toolbar-divider {
+    margin: 0 2px;
+  }
+  .reading-flow .reader-toolbar .icon-button {
+    width: 27px;
+  }
+  .reading-flow .navigation-pane {
+    top: 114px;
+    max-width: 80vw;
+  }
+  .workflow-embedded .workflow-lanes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .workflow-embedded .workflow-lane::before {
+    display: block;
+  }
+}
+/* When the document area is narrow, keep notes in the same scroller after the page. */
+.reading-flow .reader-region {
+  container-type: inline-size;
+}
+@container (max-width:720px) {
+  .paper-spread {
+    flex-direction: column;
+    width: max-content !important;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .word-comments {
+    width: 100%;
+    min-height: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .positioned-comment {
+    position: relative;
+    top: auto !important;
+  }
+  .comment-offset {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .upload-drop {
+    transition: none;
+  }
+}
+
+.track-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: min(720px, 100%);
+  margin-top: 28px;
+}
+.track-choice {
+  width: min(320px, 100%);
+  min-height: 148px;
+  padding: 22px 20px;
+  border: 1.5px solid #a77e91;
+  border-radius: 12px;
+  background: #fff;
+  color: #3d2a33;
+  text-align: left;
+  cursor: pointer;
+}
+.track-choice strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 560;
+  margin-bottom: 10px;
+}
+.track-choice span {
+  display: block;
+  color: #65575e;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.track-choice[aria-pressed="true"] {
+  background: #6d2e46;
+  border-color: #6d2e46;
+  color: #fff;
+}
+.track-choice[aria-pressed="true"] span {
+  color: #f4e8ee;
+}
+.cs-panel,
+.cs-claims,
+.result-summary {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.cs-panel {
+  padding: 22px 18px 32px;
+  overflow: auto;
+}
+.cs-panel h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 560;
+}
+.cs-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+.cs-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+.cs-panel input,
+.cs-panel select,
+.cs-panel textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #c8b4be;
+  border-radius: 8px;
+  background: #fff;
+}
+.cs-panel textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+.cs-check {
+  flex-direction: row !important;
+  align-items: center;
+}
+.cs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cs-claims {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.cs-claims li {
+  border-top: 1px solid #eadfe4;
+  padding: 12px 0;
+}
+.cs-candidate-block {
+  margin-top: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eadfe4;
+}
+.cs-candidate-notice {
+  margin: 12px 0 0;
+  color: #2d2428;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cs-comparisons {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+  color: #2d2428;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cs-claims dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0;
+}
+.cs-claims dt {
+  font-size: 12px;
+  color: #80536a;
+}
+.cs-claims dd {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+.cs-trace {
+  white-space: pre-wrap;
+}
+
+.word-comments .reader-note.expanded {
+  max-height: max(340px, calc(100dvh - 240px));
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.workflow-embedded {
+  padding: 20px 18px 28px;
+}
+.workflow-embedded .workflow-heading {
+  margin: 14px 0;
+}
+.workflow-embedded .workflow-heading h2 {
+  font-size: 19px;
+}
+.workflow-embedded .workflow-controls {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: #6a5260;
+}
+.workflow-embedded .workflow-controls select {
+  margin-top: 10px;
+}
+.workflow-embedded .workflow-root {
+  padding: 10px 13px;
+}
+.workflow-embedded .workflow-trunk,
+.workflow-embedded .workflow-merge-line {
+  height: 23px;
+}
+.workflow-embedded .workflow-analysis {
+  padding: 12px;
+}
+.workflow-embedded .workflow-analysis-tasks {
+  gap: 7px;
+  margin-top: 7px;
+}
+.workflow-embedded .workflow-analysis-tasks > button {
+  min-width: 0;
+  margin: 0;
+}
+.workflow-embedded .workflow-branch-label {
+  margin: 14px 0;
+}
+.workflow-embedded .workflow-lane > header {
+  min-height: 45px;
+  margin-bottom: 8px;
+}
+.workflow-embedded .workflow-lane > header p {
+  display: none;
+}
+.workflow-embedded .workflow-lane {
+  min-height: 146px;
+}
+.workflow-embedded .workflow-lane::before {
+  top: -15px;
+  height: 14px;
+}
+.workflow-embedded .workflow-error {
+  padding: 12px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.workflow-embedded .workflow-root span.workflow-root-icon {
+  font-size: 14px;
+}
+.reading-flow .workspace {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .reading-flow .workspace {
+    display: flex;
+    flex-direction: column;
+  }
+  .reading-flow .reader-region,
+  .reading-flow .review-side {
+    width: 100%;
+  }
+  .reading-flow .review-side {
+    min-width: 0;
+  }
+}
+
+/* One document scroller; page canvases mount only near the visible area. */
+.reading-flow .continuous-reader {
+  position: relative;
+  display: block;
+  overflow-anchor: none;
+  scroll-behavior: auto;
+}
+.continuous-page {
+  position: relative;
+  width: max-content;
+  min-width: 100%;
+  margin: 0 auto 28px;
+  scroll-margin-top: 24px;
+}
+.continuous-page:last-child {
+  margin-bottom: 0;
+}
+.paper-page-content {
+  position: relative;
+}
+.continuous-page .paper-spread {
+  margin: 0 auto;
+}
+.page-placeholder {
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 10px #30272c08;
+}
+.continuous-reader .unplaced-notes {
+  margin: 18px auto 0;
+}
+.reading-flow .reading-only .reader-region {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+}
+.reading-flow.reading-focus {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+.reading-flow.reading-focus .workspace {
+  overflow: hidden;
+}
+.reading-flow.reading-focus .continuous-reader {
+  min-height: 0;
+}
+@container (max-width:720px) {
+  .continuous-page {
+    width: 100%;
+  }
+  .continuous-page .paper-spread {
+    margin: 0 auto;
+  }
+  .paper-scroll .anchor-label {
+    left: auto;
+    right: 5px;
+  }
+}

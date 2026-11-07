@@ -1,0 +1,27 @@
+{
+  "project": "ProofNet-Verified",
+  "revision": "160414332dc196583f6c37c310b420d2a3b07c58",
+  "upstreamLean": "4.28.0",
+  "upstreamReportedReviewed": true,
+  "locallyIndependentlyReviewed": false,
+  "modelTrainingContamination": "unknown",
+  "license": "Apache-2.0",
+  "count": 367,
+  "files": {
+    "data.jsonl": {
+      "url": "https://raw.githubusercontent.com/marcusm117/ProofNet-Verified/160414332dc196583f6c37c310b420d2a3b07c58/data/proofnet-verified.jsonl",
+      "sha256": "381f4a06548a4ff6d9b923633c94a97b9c70f41033e13023aae31e1161b7f142",
+      "bytes": 545824
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/marcusm117/ProofNet-Verified/160414332dc196583f6c37c310b420d2a3b07c58/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/marcusm117/ProofNet-Verified/160414332dc196583f6c37c310b420d2a3b07c58/README.md",
+      "sha256": "3699602a59d52f203b44c5635a16f581d7c8bf17644d2a5d9bded3db406129ea",
+      "bytes": 8000
+    }
+  }
+}

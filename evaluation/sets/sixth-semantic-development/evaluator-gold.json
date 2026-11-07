@@ -1,0 +1,30 @@
+{
+  "labels": [
+    {
+      "caseId": "missing",
+      "expectation": "unknown"
+    },
+    {
+      "caseId": "mixed",
+      "expectation": "reject"
+    },
+    {
+      "caseId": "restored",
+      "expectation": "accept"
+    },
+    {
+      "caseId": "shadowed",
+      "expectation": "accept"
+    }
+  ],
+  "thresholds": {
+    "denominator": 60,
+    "firstPassComplete": 57,
+    "complete": 57,
+    "faithfulAccepted": 27,
+    "falseAccepted": 0,
+    "ambiguityFalselyCleared": 0,
+    "unknownCorrect": 11
+  },
+  "authority": "internal_development_only"
+}

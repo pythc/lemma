@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "lemma.semantic-cases.v1",
+  "provenance": "fourth_batch_internal_authored_unseen_by_evaluated_model_before_freeze_not_expert_gold",
+  "cases": [
+    {
+      "id": "three-int-assoc",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all integers x, y and z, (x + y) + z = x + (y + z)."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all integers x, y and z, (x + y) + z = x + (y + z).",
+      "candidate": "∀ x y z : Int, (x + y) + z = x + (y + z)"
+    },
+    {
+      "id": "dependent-plus-two",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every nonnegative integer n, there is a nonnegative integer m with m = n + 2."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every nonnegative integer n, there is a nonnegative integer m with m = n + 2.",
+      "candidate": "∀ n : Nat, ∃ m : Nat, m = n + 2"
+    },
+    {
+      "id": "fixed-left-identity",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There is an integer c such that for every integer z, c + z = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There is an integer c such that for every integer z, c + z = z.",
+      "candidate": "∃ c : Int, ∀ z : Int, c + z = z"
+    },
+    {
+      "id": "shadowed-display",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer x, x <= x and the following independent statement holds: for every integer x, x - x = 0. The second x is locally rebound."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer x, x <= x and the following independent statement holds: for every integer x, x - x = 0. The second x is locally rebound.",
+      "candidate": "∀ x : Int, x ≤ x ∧ (∀ x : Int, x - x = 0)"
+    },
+    {
+      "id": "bounded-four",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each nonnegative integer n with n <= 4, n <= 5."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each nonnegative integer n with n <= 4, n <= 5.",
+      "candidate": "∀ n : Nat, n ≤ 4 → n ≤ 5"
+    },
+    {
+      "id": "local-let-offset",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer x, let y be x + 2; then x < y."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer x, let y be x + 2; then x < y.",
+      "candidate": "∀ x : Int, let y := x + 2; x < y"
+    },
+    {
+      "id": "function-argument",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every function f from integers to integers and every integer x, f(x + 0) = f(x)."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every function f from integers to integers and every integer x, f(x + 0) = f(x).",
+      "candidate": "∀ f : Int → Int, ∀ x : Int, f (x + 0) = f x"
+    },
+    {
+      "id": "false-square",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, z * z < 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, z * z < 0.",
+      "candidate": "∀ z : Int, z * z < 0"
+    },
+    {
+      "id": "inconsistent-source",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, if z < 0 and 0 <= z, then z = 9."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, if z < 0 and 0 <= z, then z = 9.",
+      "candidate": "∀ z : Int, (z < 0 ∧ 0 ≤ z) → z = 9"
+    },
+    {
+      "id": "strict-implies-weak",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all integers u and v, if u < v then u <= v."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all integers u and v, if u < v then u <= v.",
+      "candidate": "∀ u v : Int, u < v → u ≤ v"
+    },
+    {
+      "id": "swap-fixed-c",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There is an integer c such that for every integer z, c + z = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There is an integer c such that for every integer z, c + z = z.",
+      "candidate": "∀ z : Int, ∃ c : Int, c + z = z"
+    },
+    {
+      "id": "delete-bound",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each nonnegative integer n with n <= 4, n <= 5."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each nonnegative integer n with n <= 4, n <= 5.",
+      "candidate": "∀ n : Nat, n ≤ 5"
+    },
+    {
+      "id": "add-contradiction",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, z * z < 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, z * z < 0.",
+      "candidate": "∀ z : Int, z < 0 ∧ 0 ≤ z → z * z < 0"
+    },
+    {
+      "id": "change-endpoint",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, if 2 <= z then 1 < z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, if 2 <= z then 1 < z.",
+      "candidate": "∀ z : Int, 2 < z → 1 < z"
+    },
+    {
+      "id": "change-int-domain",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, z - z = 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, z - z = 0.",
+      "candidate": "∀ z : Nat, z - z = 0"
+    },
+    {
+      "id": "change-function-conclusion",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every function f from integers to integers and every integer x, f(x + 0) = f(x)."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every function f from integers to integers and every integer x, f(x + 0) = f(x).",
+      "candidate": "∀ f : Int → Int, ∀ x : Int, f (x + 0) = x"
+    },
+    {
+      "id": "missing-domain-d",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every x in the numerical domain D, x * x >= 0. The definition of D is on an unavailable page."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every x in the numerical domain D, x * x >= 0. The definition of D is on an unavailable page.",
+      "candidate": "∀ x : Int, 0 ≤ x * x"
+    },
+    {
+      "id": "unreadable-sign",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z with z [unreadable comparison sign] 2, z <= 3. The sign could be < or <=; the original image is unavailable."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z with z [unreadable comparison sign] 2, z <= 3. The sign could be < or <=; the original image is unavailable.",
+      "candidate": "∀ z : Int, z ≤ 2 → z ≤ 3"
+    },
+    {
+      "id": "missing-threshold",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer n with n >= c, n >= 1. The fixed integer c is defined only in missing Section 7."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer n with n >= c, n >= 1. The fixed integer c is defined only in missing Section 7.",
+      "candidate": "∀ n : Int, 5 ≤ n → 1 ≤ n"
+    },
+    {
+      "id": "missing-operation-definition",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer x, G(x) = x + 2. The definition of G is in the missing supplement."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer x, G(x) = x + 2. The definition of G is in the missing supplement.",
+      "candidate": "∀ x : Int, x + 2 = x + 2"
+    }
+  ]
+}

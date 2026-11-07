@@ -1,0 +1,63 @@
+.team-task-card {
+  padding-right: 28px;
+}
+.team-task-card .ui-tc {
+  --ui-tc-ink: #302a30;
+  --ui-tc-text: #665960;
+  --ui-tc-muted: #665960;
+  --ui-tc-line: #e8e4e4;
+  --ui-tc-hover: #f9f3f5;
+  --ui-tc-tile: #f6f0f2;
+  --ui-tc-focus: #873749;
+  font-family: inherit;
+  box-shadow: none;
+  background: transparent;
+}
+.team-task-card .ui-tc__head {
+  padding: 0 0 12px;
+  align-items: flex-start;
+  cursor: default;
+}
+.team-task-card .ui-tc__head:hover {
+  background: transparent;
+}
+.team-task-card .ui-tc__name {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.team-task-card .ui-tc__summary {
+  color: #665960;
+  font-size: 12px;
+}
+.team-task-card .ui-tc__status {
+  padding-top: 4px;
+  font-size: 12px;
+}
+.team-task-card .ui-tc__sections {
+  padding: 0;
+}
+.team-task-card .ui-tc__sections > p {
+  margin: 0;
+  line-height: 1.8;
+}
+.team-objectives .ui-seg {
+  --ui-seg-ink: #873749;
+  --ui-seg-text: #302a30;
+  --ui-seg-soft: #665960;
+  font-family: inherit;
+  margin-bottom: 12px;
+}
+.team-objectives .ui-seg__opt {
+  min-height: 36px;
+}
+@media (max-width: 480px) {
+  .team-task-card .ui-tc__head {
+    flex-wrap: wrap;
+  }
+  .team-task-card .ui-tc__main {
+    min-width: 160px;
+  }
+}

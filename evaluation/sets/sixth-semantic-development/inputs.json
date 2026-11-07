@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "id": "missing",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number n satisfies U(n) ≥ n. U is defined only in a missing appendix."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number n satisfies U(n) ≥ n. U is defined only in a missing appendix.",
+      "candidate": "∀ n : Nat, n + 4 ≥ n"
+    },
+    {
+      "id": "mixed",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n, U(n) ≥ n. U is defined only in a missing appendix."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n, U(n) ≥ n. U is defined only in a missing appendix.",
+      "candidate": "∃ n : Nat, n + 4 ≥ n"
+    },
+    {
+      "id": "restored",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Define U(n) = n + 4 for each natural number n. Every natural number n satisfies U(n) ≥ n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Define U(n) = n + 4 for each natural number n. Every natural number n satisfies U(n) ≥ n.",
+      "candidate": "∀ n : Nat, n + 4 ≥ n"
+    },
+    {
+      "id": "shadowed",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every integer x satisfies x - x = 0, and there exists an integer x equal to two."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every integer x satisfies x - x = 0, and there exists an integer x equal to two.",
+      "candidate": "(∀ x : Int, x - x = 0) ∧ (∃ x : Int, x = 2)"
+    }
+  ]
+}

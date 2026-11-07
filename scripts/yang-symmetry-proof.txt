@@ -1,0 +1,112 @@
+by
+  let AC : Set ℝ → (ℝ → ℝ) → Prop := fun I f =>
+    ∀ ε : ℝ, 0 < ε → ∃ δ : ℝ, 0 < δ ∧
+    ∀ (n : ℕ) (x y : Fin n → ℝ),
+    (∀ i : Fin n, x i ∈ I ∧ y i ∈ I ∧ x i < y i) →
+    (∀ i j : Fin n, i ≠ j → y i ≤ x j ∨ y j ≤ x i) →
+    Finset.univ.sum (fun i : Fin n => y i - x i) < δ →
+    Finset.univ.sum (fun i : Fin n => |f (y i) - f (x i)|) < ε
+  have good : ∀ (I : Set ℝ) (f : ℝ → ℝ),
+    (∀ x ∈ I, ∀ y ∈ I, ∀ z : ℝ, x ≤ z → z ≤ y → z ∈ I) →
+    MonotoneOn f I →
+    (∀ a ∈ I, ∀ b ∈ I, ∀ θ : ℝ, 0 < θ → θ < 1 →
+      θ * f a + (1 - θ) * f b ≤ f (θ * a + (1 - θ) * b)) →
+    UniformContinuousOn f I → AC I f := by
+    intro I f hI hm hc
+    exact ((GLUE_PROOF) : (GLUE_TARGET)) I f hI hm
+      (((SLOPE_PROOF) : (SLOPE_TARGET)) I f hI hm hc)
+  have negUC : ∀ (I : Set ℝ) (f : ℝ → ℝ),
+      UniformContinuousOn f I → UniformContinuousOn (fun t => -f t) I := by
+    intro I f hf
+    apply Metric.uniformContinuousOn_iff.mpr
+    intro ε hε
+    obtain ⟨δ, hδ, hb⟩ := Metric.uniformContinuousOn_iff.mp hf ε hε
+    refine ⟨δ, hδ, ?_⟩
+    intro a ha b hbI hd
+    have hh := hb a ha b hbI hd
+    simpa only [Real.dist_eq, neg_sub_neg, abs_sub_comm] using hh
+  have reflectUC : ∀ (I : Set ℝ) (f : ℝ → ℝ),
+      UniformContinuousOn f I →
+      UniformContinuousOn (fun t => f (-t)) {t | -t ∈ I} := by
+    intro I f hf
+    apply Metric.uniformContinuousOn_iff.mpr
+    intro ε hε
+    obtain ⟨δ, hδ, hb⟩ := Metric.uniformContinuousOn_iff.mp hf ε hε
+    refine ⟨δ, hδ, ?_⟩
+    intro a ha b hbI hd
+    apply hb (-a) ha (-b) hbI
+    simpa only [Real.dist_eq, neg_sub_neg, abs_sub_comm] using hd
+  have negAC : ∀ (I : Set ℝ) (f : ℝ → ℝ), AC I (fun t => -f t) → AC I f := by
+    intro I f hf ε hε
+    obtain ⟨δ, hδ, hb⟩ := hf ε hε
+    refine ⟨δ, hδ, ?_⟩
+    intro n x y hx hd hl
+    have hh := hb n x y hx hd hl
+    simpa only [neg_sub_neg, abs_sub_comm] using hh
+  have reflectAC : ∀ (I : Set ℝ) (f : ℝ → ℝ),
+      AC {t | -t ∈ I} (fun t => f (-t)) → AC I f := by
+    intro I f hf ε hε
+    obtain ⟨δ, hδ, hb⟩ := hf ε hε
+    refine ⟨δ, hδ, ?_⟩
+    intro n x y hx hd hl
+    have he : ∀ i : Fin n, -y i ∈ {t | -t ∈ I} ∧
+        -x i ∈ {t | -t ∈ I} ∧ -y i < -x i := by
+      intro i
+      refine ⟨?_, ?_, neg_lt_neg (hx i).2.2⟩
+      · simpa only [Set.mem_ofPred_eq, neg_neg] using (hx i).2.1
+      · simpa only [Set.mem_ofPred_eq, neg_neg] using (hx i).1
+    have hd' : ∀ i j : Fin n, i ≠ j → -x i ≤ -y j ∨ -x j ≤ -y i := by
+      intro i j hij
+      rcases hd i j hij with h | h
+      · exact Or.inr (neg_le_neg h)
+      · exact Or.inl (neg_le_neg h)
+    have hl' : Finset.univ.sum (fun i : Fin n => -x i - -y i) < δ := by
+      simpa only [neg_sub_neg] using hl
+    have hh := hb n (fun i => -y i) (fun i => -x i) he hd' hl'
+    simpa only [neg_neg, abs_sub_comm] using hh
+  intro I f hI hm hc hu
+  change AC I f
+  have hJ : ∀ x ∈ {t : ℝ | -t ∈ I}, ∀ y ∈ {t : ℝ | -t ∈ I},
+      ∀ z : ℝ, x ≤ z → z ≤ y → z ∈ {t : ℝ | -t ∈ I} := by
+    intro x hx y hy z hxz hzy
+    exact hI (-y) hy (-x) hx (-z) (by linarith) (by linarith)
+  rcases hm with hinc | hdec
+  · rcases hc with hconc | hconv
+    · exact good I f hI hinc hconc hu
+    · apply negAC I f
+      apply reflectAC I (fun t => -f t)
+      apply good {t | -t ∈ I} (fun t => -f (-t)) hJ
+      · intro a ha b hb hab
+        have hh := hinc hb ha (neg_le_neg hab)
+        try dsimp
+        linarith
+      · intro a ha b hb θ hθ hθ1
+        have hh := hconv (-a) ha (-b) hb θ hθ hθ1
+        have heq : -(θ * a + (1 - θ) * b) = θ * -a + (1 - θ) * -b := by ring
+        try dsimp
+        rw [heq]
+        nlinarith [hh]
+      · exact negUC _ _ (reflectUC I f hu)
+  · rcases hc with hconc | hconv
+    · apply reflectAC I f
+      apply good {t | -t ∈ I} (fun t => f (-t)) hJ
+      · intro a ha b hb hab
+        exact hdec hb ha (neg_le_neg hab)
+      · intro a ha b hb θ hθ hθ1
+        have hh := hconc (-a) ha (-b) hb θ hθ hθ1
+        have heq : -(θ * a + (1 - θ) * b) = θ * -a + (1 - θ) * -b := by ring
+        try dsimp
+        rw [heq]
+        exact hh
+      · exact reflectUC I f hu
+    · apply negAC I f
+      apply good I (fun t => -f t) hI
+      · intro a ha b hb hab
+        have hh := hdec ha hb hab
+        try dsimp
+        linarith
+      · intro a ha b hb θ hθ hθ1
+        have hh := hconv a ha b hb θ hθ hθ1
+        try dsimp
+        nlinarith [hh]
+      · exact negUC I f hu

@@ -1,0 +1,62 @@
+.original-proof {
+  margin: 18px 0;
+  color: #302b2d;
+}
+.original-proof h3 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.original-proof > p {
+  font-size: 14px;
+}
+.original-step {
+  border-bottom: 1px solid #d6cbd0;
+  padding: 10px 0;
+  font-size: 13px;
+}
+.original-step > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: revert;
+}
+.original-step > summary > span {
+  max-width: 65%;
+  font-weight: 600;
+}
+.original-step strong {
+  font-size: 12px;
+  flex-shrink: 0;
+  color: #62545b;
+}
+.original-step.passed strong,
+.original-step.completed strong {
+  color: #246044;
+}
+.original-step.refuted strong,
+.original-step.route_violation strong {
+  color: #972d40;
+}
+.original-step pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  max-height: 280px;
+  overflow: auto;
+  background: #f2edef;
+  padding: 10px;
+}
+.original-step p {
+  line-height: 1.65;
+}
+.original-step button {
+  display: block;
+  text-align: left;
+  margin: 6px 0;
+}
+.original-closure {
+  border-left: 3px solid #963c55;
+  padding-left: 10px;
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "one supplementary case frozen before external development calls; not population accuracy",
+  "cases": [
+    {
+      "id": "H1",
+      "source": "For every natural number n, if n = 0 then n + 1 = 1."
+    }
+  ]
+}

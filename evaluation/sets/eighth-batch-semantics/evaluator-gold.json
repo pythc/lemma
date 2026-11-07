@@ -1,0 +1,114 @@
+{
+  "authority": "internal_labels_not_independent_expert",
+  "labels": [
+    {
+      "caseId": "E8F01",
+      "expectation": "accept",
+      "rationale": "Same universal variable, natural-number domain and equality."
+    },
+    {
+      "caseId": "E8F02",
+      "expectation": "accept",
+      "rationale": "Unary negation is inside subtraction, with the same integer variable."
+    },
+    {
+      "caseId": "E8F03",
+      "expectation": "accept",
+      "rationale": "The existential b depends on the universally quantified a."
+    },
+    {
+      "caseId": "E8F04",
+      "expectation": "accept",
+      "rationale": "One shared c is chosen before all t."
+    },
+    {
+      "caseId": "E8F05",
+      "expectation": "accept",
+      "rationale": "Same implication direction and inclusive inequalities."
+    },
+    {
+      "caseId": "E8F06",
+      "expectation": "accept",
+      "rationale": "The two occurrences of j have distinct local binders."
+    },
+    {
+      "caseId": "E8F07",
+      "expectation": "accept",
+      "rationale": "Same two binders, premise and conclusion."
+    },
+    {
+      "caseId": "E8F08",
+      "expectation": "accept",
+      "rationale": "V is explicitly defined for both consecutive pages; substitution is exact."
+    },
+    {
+      "caseId": "E8F09",
+      "expectation": "accept",
+      "rationale": "Square is multiplication of z by itself; nonnegative means at least zero."
+    },
+    {
+      "caseId": "E8F10",
+      "expectation": "accept",
+      "rationale": "Both endpoints and the implication are preserved."
+    },
+    {
+      "caseId": "E8C01",
+      "expectation": "reject",
+      "rationale": "A dependent witness becomes a single bound for all naturals."
+    },
+    {
+      "caseId": "E8C02",
+      "expectation": "reject",
+      "rationale": "Implication is reversed; t=5 separates the claims."
+    },
+    {
+      "caseId": "E8C03",
+      "expectation": "reject",
+      "rationale": "The stated integer domain is narrowed to naturals."
+    },
+    {
+      "caseId": "E8C04",
+      "expectation": "reject",
+      "rationale": "The nonnegative premise is removed; t=-2 separates the claims."
+    },
+    {
+      "caseId": "E8C05",
+      "expectation": "reject",
+      "rationale": "Strict inequality is changed to equality."
+    },
+    {
+      "caseId": "E8C06",
+      "expectation": "reject",
+      "rationale": "Injectivity replaces equality preservation; constant functions distinguish them."
+    },
+    {
+      "caseId": "E8U01",
+      "expectation": "unknown",
+      "rationale": "T may or may not equal doubling; the supplied text cannot decide substitution fidelity."
+    },
+    {
+      "caseId": "E8U02",
+      "expectation": "unknown",
+      "rationale": "The missing relation may be ≤ or another relation; no inequivalence follows from notation alone."
+    },
+    {
+      "caseId": "E8U03",
+      "expectation": "unknown",
+      "rationale": "Whether the quantified domain is all integers cannot be determined without D."
+    },
+    {
+      "caseId": "E8U04",
+      "expectation": "unknown",
+      "rationale": "Replacing K by nine cannot be checked; no supplied definition excludes nine."
+    }
+  ],
+  "thresholds": {
+    "denominator": 60,
+    "firstPassComplete": 57,
+    "complete": 57,
+    "faithfulAccepted": 27,
+    "falseAccepted": 0,
+    "ambiguityFalselyCleared": 0,
+    "unknownCorrect": 11
+  }
+}

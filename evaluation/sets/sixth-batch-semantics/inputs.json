@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "lemma.semantic-cases.v1",
+  "provenance": "sixth_new_internal_holdout_no_independent_expert",
+  "cases": [
+    {
+      "id": "F01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all natural numbers a and b, a * (b + 1) = a * b + a."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all natural numbers a and b, a * (b + 1) = a * b + a.",
+      "candidate": "∀ a b : Nat, a * (b + 1) = a * b + a"
+    },
+    {
+      "id": "F02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There exists an integer e such that every integer z satisfies z + e = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There exists an integer e such that every integer z satisfies z + e = z.",
+      "candidate": "∃ e : Int, ∀ z : Int, z + e = z"
+    },
+    {
+      "id": "F03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z there exists an integer w such that z + w = 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z there exists an integer w such that z + w = 0.",
+      "candidate": "∀ z : Int, ∃ w : Int, z + w = 0"
+    },
+    {
+      "id": "F04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all natural numbers a and b, if a is less than b then a is at most b."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all natural numbers a and b, if a is less than b then a is at most b.",
+      "candidate": "∀ a b : Nat, a < b → a ≤ b"
+    },
+    {
+      "id": "F05",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every function g from natural numbers to integers, g(1) = g(1)."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every function g from natural numbers to integers, g(1) = g(1).",
+      "candidate": "∀ g : Nat → Int, g 1 = g 1"
+    },
+    {
+      "id": "F06",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, let w be z * z. Then w is nonnegative."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, let w be z * z. Then w is nonnegative.",
+      "candidate": "∀ z : Int, let w := z * z; w ≥ 0"
+    },
+    {
+      "id": "F07",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number is strictly larger than itself."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number is strictly larger than itself.",
+      "candidate": "∀ n : Nat, n > n"
+    },
+    {
+      "id": "F08",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, if z < z then z = 7."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, if z < z then z = 7.",
+      "candidate": "∀ z : Int, z < z → z = 7"
+    },
+    {
+      "id": "F09",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There exists a natural number x equal to one, and every natural number x satisfies x * 1 = x."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There exists a natural number x equal to one, and every natural number x satisfies x * 1 = x.",
+      "candidate": "(∃ x : Nat, x = 1) ∧ (∀ x : Nat, x * 1 = x)"
+    },
+    {
+      "id": "F10",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Definition. For every integer z, S(z) is the additive inverse of z, denoted -z."
+        },
+        {
+          "pageIndex": 1,
+          "text": "For every integer z, S(z) + z = 0."
+        }
+      ],
+      "pageIndex": 1,
+      "quote": "For every integer z, S(z) + z = 0.",
+      "candidate": "∀ z : Int, -z + z = 0"
+    },
+    {
+      "id": "C01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z there exists an integer w such that z + w = 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z there exists an integer w such that z + w = 0.",
+      "candidate": "∃ w : Int, ∀ z : Int, z + w = 0"
+    },
+    {
+      "id": "C02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, z * 0 = 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, z * 0 = 0.",
+      "candidate": "∀ z : Int, False → z * 0 = 0"
+    },
+    {
+      "id": "C03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all natural numbers a and b, if a < b then a ≤ b."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all natural numbers a and b, if a < b then a ≤ b.",
+      "candidate": "∀ a b : Nat, a ≤ b"
+    },
+    {
+      "id": "C04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every integer z satisfies z + 0 = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every integer z satisfies z + 0 = z.",
+      "candidate": "∀ z : Nat, z + 0 = z"
+    },
+    {
+      "id": "C05",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n, n + 1 is not equal to n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n, n + 1 is not equal to n.",
+      "candidate": "∀ n : Nat, n + 1 = n"
+    },
+    {
+      "id": "C06",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n, Q(n) is positive. The definition of Q is in an unavailable appendix."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n, Q(n) is positive. The definition of Q is in an unavailable appendix.",
+      "candidate": "∃ n : Nat, n + 5 > 0"
+    },
+    {
+      "id": "U01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, S(z) + z = 0. S is defined only on an unavailable page."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, S(z) + z = 0. S is defined only on an unavailable page.",
+      "candidate": "∀ z : Int, -z + z = 0"
+    },
+    {
+      "id": "U02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n satisfying P(n), n is greater than one. P is defined in the unavailable supplement."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n satisfying P(n), n is greater than one. P is defined in the unavailable supplement.",
+      "candidate": "∀ n : Nat, n ≥ 2 → n > 1"
+    },
+    {
+      "id": "U03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For all natural numbers a and b, J(a,b) implies J(b,a). The definition of J is unavailable."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For all natural numbers a and b, J(a,b) implies J(b,a). The definition of J is unavailable.",
+      "candidate": "∀ a b : Nat, a = b → b = a"
+    },
+    {
+      "id": "U04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There is an integer c for which every integer z satisfies W(c,z). W is defined on a missing page."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There is an integer c for which every integer z satisfies W(c,z). W is defined on a missing page.",
+      "candidate": "∃ c : Int, ∀ z : Int, c * z = 0"
+    }
+  ]
+}

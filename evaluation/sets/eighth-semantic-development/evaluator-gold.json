@@ -1,0 +1,40 @@
+{
+  "labels": [
+    {
+      "caseId": "missing",
+      "expectation": "unknown"
+    },
+    {
+      "caseId": "mixed",
+      "expectation": "reject"
+    },
+    {
+      "caseId": "restored",
+      "expectation": "accept"
+    },
+    {
+      "caseId": "shadowed",
+      "expectation": "accept"
+    },
+    {
+      "caseId": "crosspage",
+      "expectation": "accept",
+      "rationale": "The explicit definition applies to both consecutive pages."
+    },
+    {
+      "caseId": "closed_scope",
+      "expectation": "unknown",
+      "rationale": "The previous paragraph definition cannot identify the new function on the next page."
+    }
+  ],
+  "thresholds": {
+    "denominator": 60,
+    "firstPassComplete": 57,
+    "complete": 57,
+    "faithfulAccepted": 27,
+    "falseAccepted": 0,
+    "ambiguityFalselyCleared": 0,
+    "unknownCorrect": 11
+  },
+  "authority": "internal_development_only"
+}

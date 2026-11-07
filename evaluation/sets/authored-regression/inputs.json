@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "lemma.evaluation-set.v1",
+  "name": "Authored semantic and execution diagnostics",
+  "cases": [
+    {
+      "id": "authored/square-faithful",
+      "family": "authored/square",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "Every real number x satisfies x squared greater than or equal to zero.",
+        "candidate": "∀ x : ℝ, 0 ≤ x ^ 2"
+      }
+    },
+    {
+      "id": "authored/square-exists",
+      "family": "authored/square",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "Every real number x satisfies x squared greater than or equal to zero.",
+        "candidate": "∃ x : ℝ, 0 ≤ x ^ 2"
+      }
+    },
+    {
+      "id": "authored/square-domain",
+      "family": "authored/square",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "Every real number x satisfies x squared greater than or equal to zero.",
+        "candidate": "∀ x : ℕ, 0 ≤ x ^ 2"
+      }
+    },
+    {
+      "id": "authored/commute-faithful",
+      "family": "authored/addition",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For all real numbers x and y, x plus y equals y plus x.",
+        "candidate": "∀ x y : ℝ, x + y = y + x"
+      }
+    },
+    {
+      "id": "authored/commute-vacuous",
+      "family": "authored/addition",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For all real numbers x and y, x plus y equals y plus x.",
+        "candidate": "∀ x y : ℝ, False → x + y = y + x"
+      }
+    },
+    {
+      "id": "authored/strict-silent-fix",
+      "family": "authored/strict-square",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For every real number x, x squared is strictly greater than zero.",
+        "candidate": "∀ x : ℝ, 0 ≤ x ^ 2"
+      }
+    },
+    {
+      "id": "authored/strict-faithful-false",
+      "family": "authored/strict-square",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For every real number x, x squared is strictly greater than zero.",
+        "candidate": "∀ x : ℝ, 0 < x ^ 2"
+      }
+    },
+    {
+      "id": "authored/sqrt-assumption",
+      "family": "authored/sqrt",
+      "split": "development",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For every nonnegative real number x, the square of its square root equals x.",
+        "candidate": "∀ x : ℝ, Real.sqrt x ^ 2 = x"
+      }
+    },
+    {
+      "id": "authored/conjugate-missing",
+      "family": "authored/conjugate",
+      "split": "holdout",
+      "layer": "semantic",
+      "origin": "authored_regression",
+      "contamination": "private_unpublished",
+      "provenance": {
+        "url": "local:authored-evaluation-regression",
+        "revision": "v1"
+      },
+      "input": {
+        "source": "For every complex number z, z times its complex conjugate equals its squared norm.",
+        "candidate": "∀ z : ℂ, z * z = (‖z‖ ^ 2 : ℝ)"
+      }
+    },
+    {
+      "id": "authored/formal/0",
+      "family": "authored/analysis-fixtures",
+      "split": "development",
+      "layer": "formal",
+      "origin": "authored_regression",
+      "contamination": "known_exposed",
+      "provenance": {
+        "url": "local:fixtures/analysis-cases.json",
+        "revision": "c34463fa988cf52e3eeccabc0c0d338b4f7563b6c5a316e8c476aa00405f8bb2"
+      },
+      "input": {
+        "formalStatement": "∀ (f : ℝ → ℝ) (a b : ℝ), ContinuousOn f (Set.Icc a b) → UniformContinuousOn f (Set.Icc a b)",
+        "header": "analysis-continuity-v1",
+        "leanVersion": "4.35.0"
+      }
+    },
+    {
+      "id": "authored/formal/1",
+      "family": "authored/analysis-fixtures",
+      "split": "development",
+      "layer": "formal",
+      "origin": "authored_regression",
+      "contamination": "known_exposed",
+      "provenance": {
+        "url": "local:fixtures/analysis-cases.json",
+        "revision": "c34463fa988cf52e3eeccabc0c0d338b4f7563b6c5a316e8c476aa00405f8bb2"
+      },
+      "input": {
+        "formalStatement": "∀ (f : ℝ → ℝ), Continuous f → UniformContinuous f",
+        "header": "analysis-continuity-v1",
+        "leanVersion": "4.35.0"
+      }
+    },
+    {
+      "id": "authored/formal/2",
+      "family": "authored/analysis-fixtures",
+      "split": "development",
+      "layer": "formal",
+      "origin": "authored_regression",
+      "contamination": "known_exposed",
+      "provenance": {
+        "url": "local:fixtures/analysis-cases.json",
+        "revision": "c34463fa988cf52e3eeccabc0c0d338b4f7563b6c5a316e8c476aa00405f8bb2"
+      },
+      "input": {
+        "formalStatement": "∀ (f : ℝ → ℝ) (a b : ℝ), ContinuousOn f (Set.Icc a b) → UniformContinuousOn f (Set.Icc a b)",
+        "header": "analysis-continuity-v1",
+        "leanVersion": "4.35.0"
+      }
+    },
+    {
+      "id": "authored/paper/analysis-fixtures",
+      "family": "authored/analysis-fixtures",
+      "split": "development",
+      "layer": "paper",
+      "origin": "authored_regression",
+      "contamination": "known_exposed",
+      "provenance": {
+        "url": "local:public/analysis-fixtures.pdf",
+        "revision": "52f6caa8c6802bec5d8d0bba6474c6c79b2c2a50bf61c4b45a99977abf628fe2"
+      },
+      "input": {
+        "pdfSha256": "52f6caa8c6802bec5d8d0bba6474c6c79b2c2a50bf61c4b45a99977abf628fe2",
+        "pdfFile": "public/analysis-fixtures.pdf",
+        "scope": "请阅读 PDF 中的数学命题与论证，自主选择一个命题核查，区分原文语义、原证明路线和形式目标是否通过。"
+      }
+    }
+  ]
+}

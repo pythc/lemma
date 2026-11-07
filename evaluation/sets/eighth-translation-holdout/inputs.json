@@ -1,0 +1,9 @@
+{
+  "exposure": "frozen_internal_supplement_not_prompt_tuned",
+  "cases": [
+    {
+      "id": "H8",
+      "source": "For any integers p and q, if p is at most q and q is at most p, then p equals q."
+    }
+  ]
+}

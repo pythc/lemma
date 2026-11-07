@@ -1,0 +1,45 @@
+{
+  "authored": true,
+  "cases": [
+    {
+      "label": "Theorem 1",
+      "quote": "For every natural number n, n + 0 = n.",
+      "statement": "对任意自然数 n，n + 0 = n。",
+      "assumptions": [
+        "n 为自然数"
+      ],
+      "leanTarget": "∀ n : Nat, n + 0 = n",
+      "proof": "by\n  intro n\n  rfl",
+      "proofMode": "proof",
+      "expected": "formalized_proved",
+      "note": "This follows from the definition of addition by zero."
+    },
+    {
+      "label": "Theorem 2",
+      "quote": "For every natural number n, n + 1 = n.",
+      "statement": "对任意自然数 n，n + 1 = n。",
+      "assumptions": [
+        "n 为自然数"
+      ],
+      "leanTarget": "∀ n : Nat, n + 1 = n",
+      "proof": "by\n  intro h\n  have bad := h 0\n  simp at bad",
+      "proofMode": "counterexample",
+      "expected": "refuted",
+      "note": "Deliberately false. The value n = 0 refutes the statement."
+    },
+    {
+      "label": "Theorem 3",
+      "quote": "For every natural number n, n * n >= n.",
+      "statement": "对任意自然数 n，n² ≥ n。",
+      "assumptions": [
+        "n 为自然数"
+      ],
+      "leanTarget": "∀ n : Nat, n * n ≥ n",
+      "proof": "by\n  intro n\n  rfl",
+      "proofMode": "proof",
+      "expected": "unknown",
+      "note": "This statement is true, but the supplied rfl proof is invalid.",
+      "extra": "Failure of this proof attempt must not be reported as a false theorem."
+    }
+  ]
+}

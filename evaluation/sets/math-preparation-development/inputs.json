@@ -1,0 +1,29 @@
+{
+  "exposure": "D1-D4 and H8 known regression; H9 frozen internal supplement before model runs",
+  "cases": [
+    {
+      "id": "D1",
+      "source": "For all natural numbers a and b, a * b = b * a."
+    },
+    {
+      "id": "D2",
+      "source": "For every integer x, there exists an integer y with y = x - 1."
+    },
+    {
+      "id": "D3",
+      "source": "For every natural number x, if x < x then x = 9."
+    },
+    {
+      "id": "D4",
+      "source": "Every integer x satisfies x * x >= 0, and there exists an integer x equal to four."
+    },
+    {
+      "id": "H8",
+      "source": "For any integers p and q, if p is at most q and q is at most p, then p equals q."
+    },
+    {
+      "id": "H9",
+      "source": "For any natural numbers a and b, if a + b = 0 then a = 0 and b = 0."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "lemma.document-models.v1",
+  "models": [
+    {
+      "repository": "docling-project/CodeFormulaV2",
+      "revision": "ecedbe111d15c2dc60bfd4a823cbe80127b58af4",
+      "license": "cdla-permissive-2.0"
+    },
+    {
+      "repository": "docling-project/docling-layout-heron",
+      "revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8",
+      "license": "apache-2.0"
+    }
+  ]
+}

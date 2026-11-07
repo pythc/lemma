@@ -1,0 +1,67 @@
+{
+  "identity": {
+    "node": "v24.15.0",
+    "abi": "137",
+    "platform": "darwin",
+    "arch": "arm64",
+    "nodeBinarySha256": "3200fbd9f7fd4410426dd541e10d1ab829d3472f270d743c7fabd1696c03fe32",
+    "packageLockSha256": "350162752177e76d9f6d2b84b6eaa2993a65fe16b44ccd06259cd2f78889e9db",
+    "dependencyTree": {
+      "sha256": "2b5676e2e5a95d26e0bc1a5aeba3d43b87b4776fb71da05bcb2fa5820962f98c",
+      "entries": 27116
+    },
+    "dependencies": {
+      "jsonc-parser": {
+        "version": "3.3.1",
+        "packageSha256": "a7a9192caaac00d9330592f4fd572908bee037518128a0fc3db96d2cd652e2b5"
+      },
+      "zod": {
+        "version": "4.6.7",
+        "packageSha256": "c2d190d9ee4e0bdb60332aaa2130a6a98d65ddb903fe1d29248b15de57832c45"
+      },
+      "deepagents": {
+        "version": "1.15.1",
+        "packageSha256": "545605f02f50c7f0a5e59f3e4d229af371957e46baba0397d285e165dd4b03fc"
+      },
+      "langchain": {
+        "version": "1.5.16",
+        "packageSha256": "fdc4ba73ad27ca126db5452dbce915cf86ed6d8187d58ba4bd8f08a32299f523"
+      },
+      "@langchain/core": {
+        "version": "1.2.17",
+        "packageSha256": "19c6d484ad68fbaa65944869d2c263bd04aaceb2869836172d438de7b5ce434f"
+      },
+      "@langchain/langgraph": {
+        "version": "1.5.1",
+        "packageSha256": "d93a381d0faa3511eb48889f7b85531c2d8a01bd75580a356e7adb4d1304f6f1"
+      },
+      "undici": {
+        "version": "7.30.1",
+        "packageSha256": "0e62f63508558cd8bc44dbf61baee562907ff4bbd147bf837ded998c2bf62a28"
+      },
+      "better-sqlite3": {
+        "version": "12.11.1",
+        "packageSha256": "4665126292eff5dffe6c0ffabf98c4de18e479aa0b53edd775028eb567b3ecc1"
+      }
+    },
+    "sqliteBinarySha256": "c6fac315df023cf5efec45a3511e6515c6b0f7461a4a284b1b7a79c7ef8febe7",
+    "sqlite": {
+      "version": "3.53.2",
+      "ok": 1
+    },
+    "versionFiles": {
+      "nvmrc": "24.15.0",
+      "nodeVersion": "24.15.0"
+    }
+  },
+  "identityHash": "15c5b5729fd774592f7110944096285be23f28ad3a15c61d933d5971784df8e3",
+  "location": {
+    "node": "/Users/alex/.nvm/versions/node/v24.15.0/bin/node",
+    "dependencies": "/Users/alex/Documents/ChatGPT/竞赛/workspaces/math-review-public-archive-20261026/node_modules",
+    "dependenciesAreSymlink": false
+  },
+  "command": [
+    "/Users/alex/.nvm/versions/node/v24.15.0/bin/node",
+    "-"
+  ]
+}

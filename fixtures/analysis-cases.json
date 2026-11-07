@@ -1,0 +1,65 @@
+{
+  "authored": true,
+  "classification": "focused_domain_cases_not_research_papers",
+  "libraryProfile": "analysis-continuity-v1",
+  "cases": [
+    {
+      "label": "Theorem A1",
+      "quote": "A continuous real function on a closed bounded interval is uniformly continuous on that interval.",
+      "statement": "实数闭区间上的连续函数在该区间上一致连续。",
+      "assumptions": [
+        "f : ℝ → ℝ",
+        "定义域是闭区间 Set.Icc a b",
+        "f 在该区间上连续"
+      ],
+      "leanTarget": "∀ (f : ℝ → ℝ) (a b : ℝ), ContinuousOn f (Set.Icc a b) → UniformContinuousOn f (Set.Icc a b)",
+      "proof": "by\n  intro f a b h\n  exact isCompact_Icc.uniformContinuousOn_of_continuous h",
+      "proofMode": "proof",
+      "expected": "formalized_proved",
+      "notes": [
+        "The domain is the closed bounded interval Icc(a,b).",
+        "Continuity is assumed on that same interval.",
+        "Empty intervals are allowed; no extra condition a <= b is needed."
+      ],
+      "reference": "Heine-Cantor theorem; mathlib IsCompact.uniformContinuousOn_of_continuous"
+    },
+    {
+      "label": "Theorem A2",
+      "quote": "Every continuous real function on the whole real line is uniformly continuous.",
+      "statement": "在整个实数轴上连续的每个实函数都一致连续。",
+      "assumptions": [
+        "f : ℝ → ℝ",
+        "f 在整个实数轴上连续"
+      ],
+      "leanTarget": "∀ (f : ℝ → ℝ), Continuous f → UniformContinuous f",
+      "proof": "by\n  intro claim\n  have hc := claim (fun x : ℝ => x ^ 2) (continuous_id.pow 2)\n  rcases Metric.uniformContinuous_iff.mp hc 1 zero_lt_one with ⟨δ, hδ, hclose⟩\n  have hd2 : 0 < δ / 2 := by linarith\n  let x : ℝ := δ⁻¹\n  let y : ℝ := x + δ / 2\n  have hx : x * δ = 1 := inv_mul_cancel₀ (ne_of_gt hδ)\n  have hxy : dist x y < δ := by\n    rw [Real.dist_eq]\n    have heq : x - y = -(δ / 2) := by dsimp [y]; linarith\n    rw [heq, abs_neg, abs_of_pos hd2]\n    linarith\n  have hdiff : 1 ≤ y ^ 2 - x ^ 2 := by\n    dsimp [y]\n    nlinarith [sq_nonneg (δ / 2)]\n  have tooLarge : 1 ≤ dist (x ^ 2) (y ^ 2) := by\n    rw [Real.dist_eq, abs_sub_comm]\n    exact hdiff.trans (le_abs_self _)\n  exact (not_lt_of_ge tooLarge) (hclose hxy)",
+      "proofMode": "counterexample",
+      "expected": "refuted",
+      "notes": [
+        "This deliberately removes compactness from the domain.",
+        "Counterexample: f(x) = x^2 on the whole real line.",
+        "A machine-checked negation is required; a failed proof is insufficient."
+      ],
+      "reference": "Explicit epsilon-delta contradiction for the square function"
+    },
+    {
+      "label": "Theorem A3",
+      "quote": "A continuous real function on a closed bounded interval is uniformly continuous on that interval.",
+      "statement": "实数闭区间上的连续函数在该区间上一致连续。",
+      "assumptions": [
+        "f : ℝ → ℝ",
+        "定义域是闭区间 Set.Icc a b",
+        "f 在该区间上连续"
+      ],
+      "leanTarget": "∀ (f : ℝ → ℝ) (a b : ℝ), ContinuousOn f (Set.Icc a b) → UniformContinuousOn f (Set.Icc a b)",
+      "proof": "by\n  intro f a b h\n  rfl",
+      "proofMode": "proof",
+      "expected": "unknown",
+      "notes": [
+        "The statement is true, but the submitted rfl proof is invalid.",
+        "The outcome must stay unknown until acceptable evidence exists."
+      ],
+      "reference": "Same mathematical statement as A1; invalid attempted proof"
+    }
+  ]
+}

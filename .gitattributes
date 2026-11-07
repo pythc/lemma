@@ -1,0 +1,13 @@
+# Keep PDF fixtures and vendored runtime assets byte-for-byte.
+*.pdf binary
+*.wasm binary
+*.bcmap binary
+*.png binary
+*.jpg binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Preserve upstream license formatting.
+public/**/LICENSE* -whitespace

@@ -1,0 +1,42 @@
+node_modules/
+dist/
+.vite/
+.tools/
+.runtime/
+.env.local
+
+.staging/
+.runtime-acceptance/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local review data, archives, model/library downloads and generated outputs
+/evidence/
+/artifacts/
+/states/
+/tmp/
+/evaluation/upstream/
+/evaluation/results/
+/evaluation/runs/
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+.pytest_cache/
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.log
+.DS_Store

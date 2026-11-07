@@ -1,0 +1,23 @@
+{
+  "retrievedAt": "2026-11-05",
+  "source": "https://github.com/flohoeller/affectui",
+  "observedRepositoryHead": "721caeef6e46d152aefd9ba27ad5ef5153987118",
+  "license": "MIT",
+  "note": "Registry snapshots are pinned by their own SHA256; repository HEAD is recorded separately, not assumed to match the registry.",
+  "components": [
+    {
+      "name": "tool-call-card",
+      "url": "https://www.affectui.com/r/tool-call-card.json",
+      "registrySha256": "ebacceac4d5bbad0d795a34182ea2f40866427dcbe76bfaa8526b13257cfdff4",
+      "sourceSha256": "71fc20613e0414e405f349487f8382a3ac0bc684d5b495b78bf43afac2a21144",
+      "npmDependencies": []
+    },
+    {
+      "name": "segmented-control",
+      "url": "https://www.affectui.com/r/segmented-control.json",
+      "registrySha256": "67e65cfea6c5b487fdbc5d35681bff98473e46a9a74b71ea63c853061e66e074",
+      "sourceSha256": "8a6d4962fad7685b3b54f1a1827226f56b162dc1599e971df5f532ce42d62826",
+      "npmDependencies": []
+    }
+  ]
+}

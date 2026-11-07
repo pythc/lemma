@@ -1,0 +1,147 @@
+{
+  "datasetHash": "07330c832b2bd1f58a8ffbce5b9af0c9aae9f7a7b7d94c93f9d6cdf325dc9705",
+  "independentExpertLabels": false,
+  "labelReview": "author self-review before model trials; no independent expert available",
+  "labels": [
+    {
+      "caseId": "three-int-assoc",
+      "source": "For all integers x, y and z, (x + y) + z = x + (y + z).",
+      "target": "∀ x y z : Int, (x + y) + z = x + (y + z)",
+      "expectation": "accept",
+      "reason": "Three explicit binders; order and domains unchanged."
+    },
+    {
+      "caseId": "dependent-plus-two",
+      "source": "For every nonnegative integer n, there is a nonnegative integer m with m = n + 2.",
+      "target": "∀ n : Nat, ∃ m : Nat, m = n + 2",
+      "expectation": "accept",
+      "reason": "Existential m depends on n; nonnegative integers use Nat."
+    },
+    {
+      "caseId": "fixed-left-identity",
+      "source": "There is an integer c such that for every integer z, c + z = z.",
+      "target": "∃ c : Int, ∀ z : Int, c + z = z",
+      "expectation": "accept",
+      "reason": "Existential constant outside universal z."
+    },
+    {
+      "caseId": "shadowed-display",
+      "source": "For every integer x, x <= x and the following independent statement holds: for every integer x, x - x = 0. The second x is locally rebound.",
+      "target": "∀ x : Int, x ≤ x ∧ (∀ x : Int, x - x = 0)",
+      "expectation": "accept",
+      "reason": "Same display name, distinct binder identities."
+    },
+    {
+      "caseId": "bounded-four",
+      "source": "For each nonnegative integer n with n <= 4, n <= 5.",
+      "target": "∀ n : Nat, n ≤ 4 → n ≤ 5",
+      "expectation": "accept",
+      "reason": "Bounding hypothesis retained as premise, not quantifier."
+    },
+    {
+      "caseId": "local-let-offset",
+      "source": "For every integer x, let y be x + 2; then x < y.",
+      "target": "∀ x : Int, let y := x + 2; x < y",
+      "expectation": "accept",
+      "reason": "Local let retained with identical value."
+    },
+    {
+      "caseId": "function-argument",
+      "source": "For every function f from integers to integers and every integer x, f(x + 0) = f(x).",
+      "target": "∀ f : Int → Int, ∀ x : Int, f (x + 0) = f x",
+      "expectation": "accept",
+      "reason": "Function domain and explicit binders preserved."
+    },
+    {
+      "caseId": "false-square",
+      "source": "For every integer z, z * z < 0.",
+      "target": "∀ z : Int, z * z < 0",
+      "expectation": "accept",
+      "reason": "Literal false source must remain faithful; math concern separate."
+    },
+    {
+      "caseId": "inconsistent-source",
+      "source": "For every integer z, if z < 0 and 0 <= z, then z = 9.",
+      "target": "∀ z : Int, (z < 0 ∧ 0 ≤ z) → z = 9",
+      "expectation": "accept",
+      "reason": "Original contradictory premise retained; no translator-added contradiction."
+    },
+    {
+      "caseId": "strict-implies-weak",
+      "source": "For all integers u and v, if u < v then u <= v.",
+      "target": "∀ u v : Int, u < v → u ≤ v",
+      "expectation": "accept",
+      "reason": "Both variables and exact premise and conclusion preserved."
+    },
+    {
+      "caseId": "swap-fixed-c",
+      "source": "There is an integer c such that for every integer z, c + z = z.",
+      "target": "∀ z : Int, ∃ c : Int, c + z = z",
+      "expectation": "reject",
+      "reason": "Changes dependence even if both statements happen to hold."
+    },
+    {
+      "caseId": "delete-bound",
+      "source": "For each nonnegative integer n with n <= 4, n <= 5.",
+      "target": "∀ n : Nat, n ≤ 5",
+      "expectation": "reject",
+      "reason": "Deletes explicit premise."
+    },
+    {
+      "caseId": "add-contradiction",
+      "source": "For every integer z, z * z < 0.",
+      "target": "∀ z : Int, z < 0 ∧ 0 ≤ z → z * z < 0",
+      "expectation": "reject",
+      "reason": "Introduces contradictory premise absent from source."
+    },
+    {
+      "caseId": "change-endpoint",
+      "source": "For every integer z, if 2 <= z then 1 < z.",
+      "target": "∀ z : Int, 2 < z → 1 < z",
+      "expectation": "reject",
+      "reason": "Excludes original endpoint z=2."
+    },
+    {
+      "caseId": "change-int-domain",
+      "source": "For every integer z, z - z = 0.",
+      "target": "∀ z : Nat, z - z = 0",
+      "expectation": "reject",
+      "reason": "Restricts Int to Nat."
+    },
+    {
+      "caseId": "change-function-conclusion",
+      "source": "For every function f from integers to integers and every integer x, f(x + 0) = f(x).",
+      "target": "∀ f : Int → Int, ∀ x : Int, f (x + 0) = x",
+      "expectation": "reject",
+      "reason": "Replaces f(x) with x."
+    },
+    {
+      "caseId": "missing-domain-d",
+      "source": "For every x in the numerical domain D, x * x >= 0. The definition of D is on an unavailable page.",
+      "target": "∀ x : Int, 0 ≤ x * x",
+      "expectation": "unknown",
+      "reason": "D may or may not be integers; no other known mismatch."
+    },
+    {
+      "caseId": "unreadable-sign",
+      "source": "For every integer z with z [unreadable comparison sign] 2, z <= 3. The sign could be < or <=; the original image is unavailable.",
+      "target": "∀ z : Int, z ≤ 2 → z ≤ 3",
+      "expectation": "unknown",
+      "reason": "Candidate may match one explicitly possible reading."
+    },
+    {
+      "caseId": "missing-threshold",
+      "source": "For every integer n with n >= c, n >= 1. The fixed integer c is defined only in missing Section 7.",
+      "target": "∀ n : Int, 5 ≤ n → 1 ≤ n",
+      "expectation": "unknown",
+      "reason": "Unseen c may equal 5; cannot infer equivalence or mismatch."
+    },
+    {
+      "caseId": "missing-operation-definition",
+      "source": "For every integer x, G(x) = x + 2. The definition of G is in the missing supplement.",
+      "target": "∀ x : Int, x + 2 = x + 2",
+      "expectation": "unknown",
+      "reason": "G may be defined as addition by 2; unlike known deletion, expansion fidelity cannot be checked."
+    }
+  ]
+}

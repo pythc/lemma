@@ -1,0 +1,208 @@
+.team-workflow {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow-y: auto;
+  color: #302a30;
+  padding: 20px;
+  gap: 16px;
+}
+.team-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.team-expand {
+  align-self: flex-start;
+  color: #86374e;
+  background: white;
+  border: 1px solid #cabac0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.team-task-picker {
+  min-width: 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cabac0;
+  border-radius: 6px;
+  color: #302a30;
+  background: #fff;
+}
+.team-workflow.expanded {
+  position: fixed;
+  inset: 24px;
+  z-index: 2000;
+  height: auto;
+  background: #fff;
+  border: 1px solid #cabac0;
+  border-radius: 14px;
+  box-shadow: 0 0 0 40px #302a3066;
+}
+.team-workflow.expanded .team-detail {
+  max-height: 240px;
+}
+.team-workflow.expanded .team-expand {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.team-zoom {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 5;
+}
+.team-zoom button {
+  border: 1px solid #cabac0;
+  border-radius: 5px;
+  background: white;
+  color: #302a30;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.team-check small {
+  display: block;
+  color: #69555f;
+  font-size: 12px;
+}
+.team-heading > span {
+  font-size: 13px;
+  color: #655462;
+}
+.team-heading strong {
+  font-size: 21px;
+}
+.team-heading small {
+  font-size: 12px;
+  color: #685861;
+}
+.team-graph {
+  position: relative;
+  height: 480px;
+  min-height: 280px;
+  flex: 1;
+  background: #f8f6f3;
+  border: 1px solid #d3c8ca;
+  border-radius: 12px;
+}
+.team-node {
+  width: 235px;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #b4a3aa;
+  border-radius: 10px;
+  color: #302a30;
+  cursor: pointer;
+}
+.team-node small {
+  font-size: 12px;
+  color: #67545e;
+}
+.team-node strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.team-node.running {
+  border: 2px solid #923c55;
+  background: #fff8f9;
+}
+.team-node.completed {
+  border-color: #497353;
+}
+.team-node.failed,
+.team-node.unresolved {
+  border-color: #9e6533;
+  background: #fff9f1;
+}
+.team-detail {
+  flex-shrink: 0;
+  position: relative;
+  border: 1px solid #cabac0;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  max-height: 320px;
+  overflow: auto;
+}
+.team-detail h3 {
+  font-size: 16px;
+  padding-right: 20px;
+}
+.team-detail p {
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.team-detail small {
+  font-size: 13px;
+  color: #69555f;
+}
+.team-detail a {
+  display: block;
+  color: #86374e;
+  font-size: 13px;
+  margin: 8px 0;
+}
+.team-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: none;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+.team-actions {
+  display: flex;
+  gap: 8px;
+}
+.team-graph .react-flow__edge-path {
+  stroke: #9b7d89;
+  stroke-width: 1.8;
+}
+.team-graph .react-flow__controls-button {
+  color: #302a30;
+  background: #fff;
+}
+
+.team-objectives {
+  margin: 12px 0;
+}
+.team-objectives details {
+  border-top: 1px solid #d9cbd0;
+  padding: 10px 0;
+}
+.team-objectives summary {
+  color: #35292d;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.team-objectives summary small {
+  display: inline-block;
+  margin-left: 8px;
+  color: #754458;
+  font-size: 12px;
+}
+.team-objectives p {
+  font-size: 14px;
+}
+
+.team-resource-status {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #475569;
+  background: #f1f5f9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}

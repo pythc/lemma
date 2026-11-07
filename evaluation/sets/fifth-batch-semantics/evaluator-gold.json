@@ -1,0 +1,114 @@
+{
+  "labels": [
+    {
+      "caseId": "F01",
+      "expectation": "accept",
+      "reason": "Associative law; same three universal integers."
+    },
+    {
+      "caseId": "F02",
+      "expectation": "accept",
+      "reason": "Outer existential witness independent of the inner universal."
+    },
+    {
+      "caseId": "F03",
+      "expectation": "accept",
+      "reason": "Inner witness may depend on n."
+    },
+    {
+      "caseId": "F04",
+      "expectation": "accept",
+      "reason": "Bounds and implication are retained."
+    },
+    {
+      "caseId": "F05",
+      "expectation": "accept",
+      "reason": "Function domain and both binders unchanged."
+    },
+    {
+      "caseId": "F06",
+      "expectation": "accept",
+      "reason": "Local definition retained as let, not a new universal."
+    },
+    {
+      "caseId": "F07",
+      "expectation": "accept",
+      "reason": "False statement translated faithfully; truth not fidelity."
+    },
+    {
+      "caseId": "F08",
+      "expectation": "accept",
+      "reason": "Vacuous source premise already exists; no added condition."
+    },
+    {
+      "caseId": "F09",
+      "expectation": "accept",
+      "reason": "Separate binder scopes share the display name x."
+    },
+    {
+      "caseId": "F10",
+      "expectation": "accept",
+      "reason": "T is explicitly defined on previous page; expansion exact."
+    },
+    {
+      "caseId": "C01",
+      "expectation": "reject",
+      "reason": "Existential moved outside universal; one constant required."
+    },
+    {
+      "caseId": "C02",
+      "expectation": "reject",
+      "reason": "Negative premise replaced with nonnegative."
+    },
+    {
+      "caseId": "C03",
+      "expectation": "reject",
+      "reason": "Integer domain restricted to naturals."
+    },
+    {
+      "caseId": "C04",
+      "expectation": "reject",
+      "reason": "Adds disjunct True, weakening the conclusion."
+    },
+    {
+      "caseId": "C05",
+      "expectation": "reject",
+      "reason": "Introduces an absent contradictory premise."
+    },
+    {
+      "caseId": "C06",
+      "expectation": "reject",
+      "reason": "Changes required witness dependency and quantifier order."
+    },
+    {
+      "caseId": "U01",
+      "expectation": "unknown",
+      "reason": "T may or may not equal n+2; source definition absent, no known additional mismatch."
+    },
+    {
+      "caseId": "U02",
+      "expectation": "unknown",
+      "reason": "H may mean nonzero or a different condition; missing premise definition."
+    },
+    {
+      "caseId": "U03",
+      "expectation": "unknown",
+      "reason": "R may mean \u2264 or another relation; falsity of the target cannot decide fidelity."
+    },
+    {
+      "caseId": "U04",
+      "expectation": "unknown",
+      "reason": "B not supplied; quantifiers retained and no separately detectable source change."
+    }
+  ],
+  "authority": "internal_labels_no_independent_expert",
+  "thresholds": {
+    "denominator": 60,
+    "firstPassComplete": 57,
+    "complete": 57,
+    "faithfulAccepted": 27,
+    "falseAccepted": 0,
+    "ambiguityFalselyCleared": 0,
+    "unknownCorrect": 11
+  }
+}

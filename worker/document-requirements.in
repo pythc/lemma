@@ -1,0 +1,3 @@
+# Local PDF layout + formula parsing. Resolved wheel hashes live in the lock.
+docling==2.140.0
+transformers==5.8.0

@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "lemma.semantic-cases.v1",
+  "provenance": "new_authored_cases_frozen_before_model_trials_not_independent_expert_gold",
+  "cases": [
+    {
+      "id": "add-zero",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number n (including zero), n + 0 = n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number n (including zero), n + 0 = n.",
+      "candidate": "∀ n : Nat, n + 0 = n"
+    },
+    {
+      "id": "mul-one",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number n (including zero), n * 1 = n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number n (including zero), n * 1 = n.",
+      "candidate": "∀ n : Nat, n * 1 = n"
+    },
+    {
+      "id": "integer-add",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For any integers x and y, x + y = y + x."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For any integers x and y, x + y = y + x.",
+      "candidate": "∀ x y : Int, x + y = y + x"
+    },
+    {
+      "id": "succ-exists",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), there exists a natural number m such that n < m."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), there exists a natural number m such that n < m.",
+      "candidate": "∀ n : Nat, ∃ m : Nat, n < m"
+    },
+    {
+      "id": "reflexive",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each integer z, z = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each integer z, z = z.",
+      "candidate": "∀ z : Int, z = z"
+    },
+    {
+      "id": "conditional",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For natural numbers a and b (including zero), if a = b then b = a."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For natural numbers a and b (including zero), if a = b then b = a.",
+      "candidate": "∀ a b : Nat, a = b → b = a"
+    },
+    {
+      "id": "zero-bound",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), 0 <= n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), 0 <= n.",
+      "candidate": "∀ n : Nat, 0 ≤ n"
+    },
+    {
+      "id": "false-faithful-new",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), n + 1 = n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), n + 1 = n.",
+      "candidate": "∀ n : Nat, n + 1 = n"
+    },
+    {
+      "id": "empty-premise-new",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), if n < 0 then n = 7."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), if n < 0 then n = 7.",
+      "candidate": "∀ n : Nat, n < 0 → n = 7"
+    },
+    {
+      "id": "neg-involution",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, -(-z) = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, -(-z) = z.",
+      "candidate": "∀ z : Int, -(-z) = z"
+    },
+    {
+      "id": "change-plus",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number n (including zero), n + 0 = n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number n (including zero), n + 0 = n.",
+      "candidate": "∀ n : Nat, n + 1 = n"
+    },
+    {
+      "id": "change-quantifier",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), there exists a natural number m with n < m."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), there exists a natural number m with n < m.",
+      "candidate": "∃ m : Nat, ∀ n : Nat, n < m"
+    },
+    {
+      "id": "drop-conclusion",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), n = n and n + 1 > n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), n = n and n + 1 > n.",
+      "candidate": "∀ n : Nat, n = n"
+    },
+    {
+      "id": "change-domain",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, z + 0 = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, z + 0 = z.",
+      "candidate": "∀ z : Nat, z + 0 = z"
+    },
+    {
+      "id": "strengthen-premise",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For any integers x and y, if x <= y then x = y."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For any integers x and y, if x <= y then x = y.",
+      "candidate": "∀ x y : Int, x = y → x = y"
+    },
+    {
+      "id": "weaken-strict",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n (including zero), 0 < n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n (including zero), 0 < n.",
+      "candidate": "∀ n : Nat, 0 ≤ n"
+    },
+    {
+      "id": "missing-admissible",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every admissible natural number n is positive. The meaning of admissible is specified in Appendix X, which is not included."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every admissible natural number n is positive. The meaning of admissible is specified in Appendix X, which is not included.",
+      "candidate": "∀ n : Nat, 0 < n"
+    },
+    {
+      "id": "missing-operation",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer z, the operation F defined in the missing supplement satisfies F(z) = z."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer z, the operation F defined in the missing supplement satisfies F(z) = z.",
+      "candidate": "∀ z : Int, z = z"
+    },
+    {
+      "id": "missing-convention",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number is positive. The zero convention is defined in the unavailable notation appendix."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number is positive. The zero convention is defined in the unavailable notation appendix.",
+      "candidate": "∀ n : Nat, 0 < n"
+    },
+    {
+      "id": "missing-section",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every regular integer z has property Q. The definitions of regular and Q are in the unavailable Section 9."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every regular integer z has property Q. The definitions of regular and Q are in the unavailable Section 9.",
+      "candidate": "∀ z : Int, z = z"
+    }
+  ]
+}

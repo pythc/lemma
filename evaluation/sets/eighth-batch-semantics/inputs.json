@@ -1,0 +1,249 @@
+{
+  "exposure": "frozen_internal_evaluation_not_used_for_prompt_tuning",
+  "cases": [
+    {
+      "id": "E8F01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number k satisfies k + 0 = k."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number k satisfies k + 0 = k.",
+      "candidate": "∀ k : Nat, k + 0 = k"
+    },
+    {
+      "id": "E8F02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each integer r, subtracting its negative from r gives r plus r."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each integer r, subtracting its negative from r gives r plus r.",
+      "candidate": "∀ r : Int, r - (-r) = r + r"
+    },
+    {
+      "id": "E8F03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number a there is a natural number b equal to twice a plus one."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number a there is a natural number b equal to twice a plus one.",
+      "candidate": "∀ a : Nat, ∃ b : Nat, b = 2 * a + 1"
+    },
+    {
+      "id": "E8F04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "There is an integer c such that for every integer t, t + c = t."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "There is an integer c such that for every integer t, t + c = t.",
+      "candidate": "∃ c : Int, ∀ t : Int, t + c = t"
+    },
+    {
+      "id": "E8F05",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer t, if t is at most three, then t + 2 is at most five."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer t, if t is at most three, then t + 2 is at most five.",
+      "candidate": "∀ t : Int, t ≤ 3 → t + 2 ≤ 5"
+    },
+    {
+      "id": "E8F06",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number j satisfies j * 0 = 0, and there is a natural number j equal to seven."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number j satisfies j * 0 = 0, and there is a natural number j equal to seven.",
+      "candidate": "(∀ j : Nat, j * 0 = 0) ∧ (∃ j : Nat, j = 7)"
+    },
+    {
+      "id": "E8F07",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For any natural numbers p and q, p ≤ q implies p + 3 ≤ q + 3."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For any natural numbers p and q, p ≤ q implies p + 3 ≤ q + 3.",
+      "candidate": "∀ p q : Nat, p ≤ q → p + 3 ≤ q + 3"
+    },
+    {
+      "id": "E8F08",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Throughout this page and the following page, define V(n) = 3 * n for every natural number n."
+        },
+        {
+          "pageIndex": 1,
+          "text": "Every natural number n satisfies V(n) ≥ n."
+        }
+      ],
+      "pageIndex": 1,
+      "quote": "Every natural number n satisfies V(n) ≥ n.",
+      "candidate": "∀ n : Nat, 3 * n ≥ n"
+    },
+    {
+      "id": "E8F09",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "The square of every integer z is nonnegative."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "The square of every integer z is nonnegative.",
+      "candidate": "∀ z : Int, z * z ≥ 0"
+    },
+    {
+      "id": "E8F10",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number u, if u > 20 then u ≥ 21."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number u, if u > 20 then u ≥ 21.",
+      "candidate": "∀ u : Nat, u > 20 → u ≥ 21"
+    },
+    {
+      "id": "E8C01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number a there exists a natural number b greater than a."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number a there exists a natural number b greater than a.",
+      "candidate": "∃ b : Nat, ∀ a : Nat, b > a"
+    },
+    {
+      "id": "E8C02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every integer t, t ≤ 4 implies t ≤ 7."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every integer t, t ≤ 4 implies t ≤ 7.",
+      "candidate": "∀ t : Int, t ≤ 7 → t ≤ 4"
+    },
+    {
+      "id": "E8C03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every integer z satisfies z - z = 0."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every integer z satisfies z - z = 0.",
+      "candidate": "∀ z : Nat, z - z = 0"
+    },
+    {
+      "id": "E8C04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each integer t, if t ≥ 0 then t ≥ -1."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each integer t, if t ≥ 0 then t ≥ -1.",
+      "candidate": "∀ t : Int, t ≥ -1"
+    },
+    {
+      "id": "E8C05",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For each natural number n, n + 1 is strictly greater than n."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For each natural number n, n + 1 is strictly greater than n.",
+      "candidate": "∀ n : Nat, n + 1 = n"
+    },
+    {
+      "id": "E8C06",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every function f from natural numbers to natural numbers and all natural numbers x and y, x = y implies f(x) = f(y)."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every function f from natural numbers to natural numbers and all natural numbers x and y, x = y implies f(x) = f(y).",
+      "candidate": "∀ f : Nat → Nat, ∀ x y : Nat, f x = f y → x = y"
+    },
+    {
+      "id": "E8U01",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n, T(n) ≥ n. The definition of T appears only in an unavailable supplement."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n, T(n) ≥ n. The definition of T appears only in an unavailable supplement.",
+      "candidate": "∀ n : Nat, 2 * n ≥ n"
+    },
+    {
+      "id": "E8U02",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every natural number n satisfies the relation R(n, n + 1). The binary relation R is defined only on a missing page."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every natural number n satisfies the relation R(n, n + 1). The binary relation R is defined only on a missing page.",
+      "candidate": "∀ n : Nat, n ≤ n + 1"
+    },
+    {
+      "id": "E8U03",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "Every member x of D satisfies x ≥ 0. D is a subset of the integers whose definition is absent."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "Every member x of D satisfies x ≥ 0. D is a subset of the integers whose definition is absent.",
+      "candidate": "∀ x : Int, x ≥ 0"
+    },
+    {
+      "id": "E8U04",
+      "pages": [
+        {
+          "pageIndex": 0,
+          "text": "For every natural number n, n ≤ K implies n ≤ 10. The constant K is specified only in the missing appendix."
+        }
+      ],
+      "pageIndex": 0,
+      "quote": "For every natural number n, n ≤ K implies n ≤ 10. The constant K is specified only in the missing appendix.",
+      "candidate": "∀ n : Nat, n ≤ 9 → n ≤ 10"
+    }
+  ]
+}

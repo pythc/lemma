@@ -1,0 +1,146 @@
+{
+  "datasetHash": "7a14b89de4c0f095d22dc726d8ed64490cf1b1a39bb21a2bdc107225314d91c2",
+  "independentExpertLabels": false,
+  "labels": [
+    {
+      "caseId": "add-zero",
+      "expectation": "accept",
+      "source": "For each natural number n (including zero), n + 0 = n.",
+      "target": "∀ n : Nat, n + 0 = n",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "mul-one",
+      "expectation": "accept",
+      "source": "For each natural number n (including zero), n * 1 = n.",
+      "target": "∀ n : Nat, n * 1 = n",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "integer-add",
+      "expectation": "accept",
+      "source": "For any integers x and y, x + y = y + x.",
+      "target": "∀ x y : Int, x + y = y + x",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "succ-exists",
+      "expectation": "accept",
+      "source": "For every natural number n (including zero), there exists a natural number m such that n < m.",
+      "target": "∀ n : Nat, ∃ m : Nat, n < m",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "reflexive",
+      "expectation": "accept",
+      "source": "For each integer z, z = z.",
+      "target": "∀ z : Int, z = z",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "conditional",
+      "expectation": "accept",
+      "source": "For natural numbers a and b (including zero), if a = b then b = a.",
+      "target": "∀ a b : Nat, a = b → b = a",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "zero-bound",
+      "expectation": "accept",
+      "source": "For every natural number n (including zero), 0 <= n.",
+      "target": "∀ n : Nat, 0 ≤ n",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "false-faithful-new",
+      "expectation": "accept",
+      "source": "For every natural number n (including zero), n + 1 = n.",
+      "target": "∀ n : Nat, n + 1 = n",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "empty-premise-new",
+      "expectation": "accept",
+      "source": "For every natural number n (including zero), if n < 0 then n = 7.",
+      "target": "∀ n : Nat, n < 0 → n = 7",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "neg-involution",
+      "expectation": "accept",
+      "source": "For every integer z, -(-z) = z.",
+      "target": "∀ z : Int, -(-z) = z",
+      "reason": "Literal source-preserving translation; mathematical truth is a separate obligation."
+    },
+    {
+      "caseId": "change-plus",
+      "expectation": "reject",
+      "source": "For each natural number n (including zero), n + 0 = n.",
+      "target": "∀ n : Nat, n + 1 = n",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "change-quantifier",
+      "expectation": "reject",
+      "source": "For every natural number n (including zero), there exists a natural number m with n < m.",
+      "target": "∃ m : Nat, ∀ n : Nat, n < m",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "drop-conclusion",
+      "expectation": "reject",
+      "source": "For every natural number n (including zero), n = n and n + 1 > n.",
+      "target": "∀ n : Nat, n = n",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "change-domain",
+      "expectation": "reject",
+      "source": "For every integer z, z + 0 = z.",
+      "target": "∀ z : Nat, z + 0 = z",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "strengthen-premise",
+      "expectation": "reject",
+      "source": "For any integers x and y, if x <= y then x = y.",
+      "target": "∀ x y : Int, x = y → x = y",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "weaken-strict",
+      "expectation": "reject",
+      "source": "For every natural number n (including zero), 0 < n.",
+      "target": "∀ n : Nat, 0 ≤ n",
+      "reason": "The supplied target changes the stated source domain, quantifier, premise or conclusion."
+    },
+    {
+      "caseId": "missing-admissible",
+      "expectation": "unknown",
+      "source": "Every admissible natural number n is positive. The meaning of admissible is specified in Appendix X, which is not included.",
+      "target": "∀ n : Nat, 0 < n",
+      "reason": "Required source definitions or conventions are explicitly unavailable; unknown or concern must persist."
+    },
+    {
+      "caseId": "missing-operation",
+      "expectation": "unknown",
+      "source": "For every integer z, the operation F defined in the missing supplement satisfies F(z) = z.",
+      "target": "∀ z : Int, z = z",
+      "reason": "Required source definitions or conventions are explicitly unavailable; unknown or concern must persist."
+    },
+    {
+      "caseId": "missing-convention",
+      "expectation": "unknown",
+      "source": "Every natural number is positive. The zero convention is defined in the unavailable notation appendix.",
+      "target": "∀ n : Nat, 0 < n",
+      "reason": "Required source definitions or conventions are explicitly unavailable; unknown or concern must persist."
+    },
+    {
+      "caseId": "missing-section",
+      "expectation": "unknown",
+      "source": "Every regular integer z has property Q. The definitions of regular and Q are in the unavailable Section 9.",
+      "target": "∀ z : Int, z = z",
+      "reason": "Required source definitions or conventions are explicitly unavailable; unknown or concern must persist."
+    }
+  ]
+}

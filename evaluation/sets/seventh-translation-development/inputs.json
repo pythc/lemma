@@ -1,0 +1,21 @@
+{
+  "scope": "known development cases; no target or proof supplied",
+  "cases": [
+    {
+      "id": "D1",
+      "source": "For all natural numbers a and b, a * b = b * a."
+    },
+    {
+      "id": "D2",
+      "source": "For every integer x, there exists an integer y with y = x - 1."
+    },
+    {
+      "id": "D3",
+      "source": "For every natural number x, if x < x then x = 9."
+    },
+    {
+      "id": "D4",
+      "source": "Every integer x satisfies x * x >= 0, and there exists an integer x equal to four."
+    }
+  ]
+}
