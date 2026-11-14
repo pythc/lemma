@@ -16,7 +16,10 @@ export function brief(text, limit = 68) {
   const value = String(text || "")
     .replace(/\s+/g, " ")
     .trim();
-  return value.length > limit ? value.slice(0, limit - 1) + "…" : value;
+  const characters = Array.from(value);
+  return characters.length > limit
+    ? characters.slice(0, Math.max(0, limit - 1)).join("") + "…"
+    : value;
 }
 const sourceStepTitle = (step, route) =>
   step.title ||
