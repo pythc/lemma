@@ -12,11 +12,15 @@ export const RUN_LABELS = {
 };
 export const isActiveRun = (run) =>
   ["preparing", "running"].includes(run?.status);
+const graphemeSegmenter = new Intl.Segmenter(undefined, { granularity: "grapheme" });
 export function brief(text, limit = 68) {
   const value = String(text || "")
     .replace(/\s+/g, " ")
     .trim();
-  return value.length > limit ? value.slice(0, limit - 1) + "…" : value;
+  const characters = Array.from(graphemeSegmenter.segment(value), ({ segment }) => segment);
+  return characters.length > limit
+    ? characters.slice(0, Math.max(0, limit - 1)).join("") + "…"
+    : value;
 }
 const sourceStepTitle = (step, route) =>
   step.title ||
